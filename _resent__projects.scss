@@ -1,0 +1,83 @@
+.resent__projects{
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../img/resent__projects/background.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    h2{        
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 35px;
+        line-height: 59px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        border-bottom: 5px solid $color-4;
+        margin-top: 90px;
+        margin-bottom: 90px;
+
+        @media screen and (max-width: 992px){
+            margin-top: 45px;
+            margin-bottom: 45px;
+        }
+    }
+
+    .owl-carousel{
+        width: 50%;
+        margin-bottom: 90px;
+
+        @media screen and (max-width: 992px){
+        width: 70% !important;
+        }
+
+        @media screen and (max-width: 992px){
+            margin-bottom: 90px;
+        }
+
+        .owl-item{
+            img{
+                @media screen and (max-width: 992px){
+                    width: 100% !important;
+                    height: 520px;
+                }
+                
+                @media screen and (max-width: 630px){
+                    width: 100% !important;
+                    height: 320px;
+                }
+            }
+        }
+
+        .owl-nav{
+            position: absolute;
+            top: 50%;
+            display: flex;
+            justify-content: space-between;
+            width: 140%;
+            left: -20%;
+            z-index: 1;
+
+            @media screen and (max-width: 992px){
+                top: unset;
+                left: 50%;
+                transform: translateX(-50%);
+                margin-top: 30px;
+                width: 50%;
+            }
+            @media screen and (max-width: 500px){
+                width: 100%;
+            }
+            
+        }
+
+        .owl-stage-outer{
+            z-index: 2;
+            border-radius: 25px;
+        }
+    }
+}

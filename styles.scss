@@ -1,0 +1,29 @@
+@import 'variables';
+@import 'mixins';
+@import 'fonts';
+@import 'header';
+@import 'footer';
+
+*{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+}
+
+body,
+html{
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    overflow-x: hidden;
+	background-color: #101010;
+}
+
+@import 'first__screen';
+@import 'about__us';
+@import 'resent__projects';
+@import 'cards';
+
