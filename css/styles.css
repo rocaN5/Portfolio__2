@@ -38,7 +38,7 @@
 /* ••• Fonts End ••• */
 /* ••• Header ••• */
 header {
-  z-index: 9;
+  z-index: 2;
   position: fixed;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -389,6 +389,12 @@ footer .contact__container .contact__message form .contact__message__row .contac
           box-shadow: 0px 0px 10px 0px #000;
 }
 
+footer .contact__container .contact__message form .contact__message__row .contact__message__block input:focus, footer .contact__container .contact__message form .contact__message__row .contact__message__block input:active {
+  -webkit-box-shadow: 0px 0px 0px 1px #04e97a;
+          box-shadow: 0px 0px 0px 1px #04e97a;
+  outline: 0;
+}
+
 footer .contact__container .contact__message form .contact__message__row .contact__message__block textarea {
   background-color: #414141;
   padding: 10px 20px;
@@ -401,6 +407,33 @@ footer .contact__container .contact__message form .contact__message__row .contac
   font-style: normal;
   font-weight: 100;
   font-size: 12px;
+  cursor: auto;
+}
+
+footer .contact__container .contact__message form .contact__message__row .contact__message__block textarea:focus, footer .contact__container .contact__message form .contact__message__row .contact__message__block textarea:active {
+  -webkit-box-shadow: 0px 0px 0px 1px #04e97a;
+          box-shadow: 0px 0px 0px 1px #04e97a;
+  outline: 0;
+}
+
+footer .contact__container .contact__message form .contact__message__row .contact__message__block textarea::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+footer .contact__container .contact__message form .contact__message__row .contact__message__block textarea::-webkit-scrollbar-thumb {
+  background-color: #989898;
+  border-radius: 16px;
+  border: 4px solid #444444;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+footer .contact__container .contact__message form .contact__message__row .contact__message__block textarea::-webkit-scrollbar-thumb:hover {
+  border: 3px solid #444444;
+}
+
+footer .contact__container .contact__message form .contact__message__row .contact__message__block textarea::-webkit-scrollbar {
+  width: 10px;
 }
 
 footer .contact__container .contact__message form .contact__message__row .contact__message__block .submit__button {
@@ -508,13 +541,111 @@ html {
 body {
   overflow-x: hidden;
   background-color: #101010;
+  overflow: overlay;
+}
+
+body.overflow__active {
+  overflow: hidden;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #a72767;
+  border-radius: 16px;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  color: #545454;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+section.active {
+  display: block;
+}
+
+.menu__popup {
+  position: fixed;
+  z-index: 9;
+  width: 100%;
+  height: 100%;
+  background: #00000096;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  display: none;
+}
+
+.menu__popup .menu__exit {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 100px;
+  top: 15px;
+  background-color: transparent;
+  background-image: url("../img/menu/menu-exit.svg");
+  background-position: 0;
+  background-repeat: no-repeat;
+  background-size: contain;
+  outline: none;
+  cursor: pointer;
+}
+
+.menu__popup ul {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 50%;
+  list-style-type: none;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.menu__popup ul li a {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 59px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin-bottom: 65px;
+  text-decoration: none;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+.menu__popup ul li a:hover {
+  letter-spacing: 5px;
+  -webkit-transition: 300ms;
+  transition: 300ms;
 }
 
 .first__screen {
   position: relative;
   width: 100%;
   height: 100%;
-  background-image: url("/img/first__screen/background.png");
+  background-image: url("../img/first__screen/background.png");
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
@@ -849,7 +980,7 @@ body {
           justify-content: space-between;
   width: 140%;
   left: -20%;
-  z-index: 1;
+  z-index: 0;
 }
 
 @media screen and (max-width: 992px) {
@@ -870,7 +1001,7 @@ body {
 }
 
 .resent__projects .owl-carousel .owl-stage-outer {
-  z-index: 2;
+  z-index: 1;
   border-radius: 25px;
 }
 

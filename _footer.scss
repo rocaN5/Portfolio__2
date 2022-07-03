@@ -185,6 +185,12 @@ footer{
                             color: white;
                             border: 1px solid #707070;
                             box-shadow: 0px 0px 10px 0px #000;
+
+                            &:focus,
+                            &:active{
+                                box-shadow: 0px 0px 0px 1px #04e97a;
+                                outline: 0;
+                            }
                         }
 
                         textarea{
@@ -198,6 +204,32 @@ footer{
                             font-style: normal;
                             font-weight: 100;
                             font-size: 12px;
+                            cursor: auto;
+
+                            &:focus,
+                            &:active{
+                                box-shadow: 0px 0px 0px 1px #04e97a;
+                                outline: 0;
+                            }
+
+                            &::-webkit-scrollbar-track {
+                                background: transparent;
+                            }
+    
+                            &::-webkit-scrollbar-thumb {
+                                background-color: #989898;
+                                border-radius: 16px;
+                                border: 4px solid #444444;
+                                transition: 300ms;
+    
+                                &:hover{
+                                    border: 3px solid #444444;
+                                }
+                            }
+                            
+                            &::-webkit-scrollbar {
+                                width: 10px;
+                              }
                         }
 
                         .submit__button{

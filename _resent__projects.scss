@@ -60,7 +60,7 @@
             justify-content: space-between;
             width: 140%;
             left: -20%;
-            z-index: 1;
+            z-index: 0;
 
             @media screen and (max-width: 992px){
                 top: unset;
@@ -76,7 +76,7 @@
         }
 
         .owl-stage-outer{
-            z-index: 2;
+            z-index: 1;
             border-radius: 25px;
         }
     }
